@@ -155,9 +155,9 @@ WECOM_ENCODING_AES_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ### Step 6: Configure .env / 配置环境变量
 
 ```bash
-SLACK_BOT_TOKEN=xoxb-1234567890-1234567890123-xxxxxxxxxxxxxxxxxxxx
-SLACK_SIGNING_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-SLACK_APP_TOKEN=xapp-1-xxxxxxxxxxxx-xxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SLACK_BOT_TOKEN=xoxb-your-bot-token-here
+SLACK_SIGNING_SECRET=your-signing-secret-here
+SLACK_APP_TOKEN=xapp-your-app-token-here
 ```
 
 ### Step 7: Test / 测试
