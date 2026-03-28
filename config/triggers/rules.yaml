@@ -1,0 +1,49 @@
+triggers:
+  - id: stale_item
+    type: stale_item
+    description_zh: "事项超过7天无更新"
+    description_en: "Item has no update for 7+ days"
+    condition:
+      days_since_last_update: 7
+    action: generate_blocker_report
+    visibility: owner_and_stakeholders
+    enabled: true
+
+  - id: meeting_repeat
+    type: meeting_repeat
+    description_zh: "同一议题第3次出现在讨论中"
+    description_en: "Same topic appears in 3+ discussions"
+    condition:
+      repeat_threshold: 3
+    action: flag_meeting_vortex
+    visibility: thread
+    enabled: true
+
+  - id: commitment_no_followup
+    type: commitment_no_followup
+    description_zh: "承诺72小时无后续动作"
+    description_en: "Commitment with no follow-up after 72h"
+    condition:
+      hours_since_commitment: 72
+    action: gentle_reminder
+    visibility: private_to_person
+    enabled: true
+
+  - id: owner_silence
+    type: owner_silence
+    description_zh: "事项Owner超过5天未发言"
+    description_en: "Item owner silent for 5+ days"
+    condition:
+      days_since_owner_activity: 5
+    action: flag_ghost_owner
+    visibility: owner_and_thread
+    enabled: true
+
+  - id: new_requirement
+    type: new_requirement
+    description_zh: "新需求自动生成X光片"
+    description_en: "Auto-generate X-ray for new requirements"
+    condition: {}
+    action: generate_xray
+    visibility: thread
+    enabled: true

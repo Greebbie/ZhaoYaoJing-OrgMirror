@@ -1,0 +1,120 @@
+# Behavior Layer Monsters / 行为层妖怪
+
+monsters:
+  - id: diffusion_ghost
+    name_zh: "责任扩散妖"
+    name_en: "The Diffusion Ghost"
+    emoji: "💨"
+    category: behavior
+    description_zh: "事项无唯一Owner，或Owner频繁变更"
+    description_en: "No single owner, or owner changes repeatedly"
+    mechanism_zh: "用集体责任稀释个人问责"
+    mechanism_en: "Collective responsibility dilutes individual accountability"
+    detection_signals:
+      - pattern_zh: "事项记录中owner字段为空/为多人/变更>=2次"
+        pattern_en: "Item owner field empty / multi-person / changed >= 2 times"
+    classic_lines_zh:
+      - "这个事情大家一起推一下"
+      - "我们都有责任"
+    classic_lines_en:
+      - "Let's all push on this together"
+      - "We're all responsible for this"
+    severity_range: [1, 3]
+
+  - id: resource_void
+    name_zh: "资源黑洞妖"
+    name_en: "The Resource Void"
+    emoji: "🧱"
+    category: behavior
+    description_zh: "口头承诺资源但实际从不到位"
+    description_en: "Verbal resource commitment but actual delivery never materializes"
+    mechanism_zh: "用资源作为隐性否决权"
+    mechanism_en: "Uses resources as implicit veto power"
+    detection_signals:
+      - pattern_zh: "某方多次在讨论中提到「资源紧张」但从未给出具体排期或替代方案"
+        pattern_en: "Party mentions 'tight resources' multiple times without specific scheduling or alternatives"
+    classic_lines_zh:
+      - "人手确实比较紧，我看看怎么调配"
+      - "资源上我们再协调一下"
+    classic_lines_en:
+      - "We're really stretched thin, let me see what I can do"
+      - "Let me coordinate on resources"
+    severity_range: [1, 3]
+
+  - id: meeting_vortex
+    name_zh: "会议稀释妖"
+    name_en: "The Meeting Vortex"
+    emoji: "🌀"
+    category: behavior
+    description_zh: "用「再开个会对齐」替代实际推进"
+    description_en: "Substitutes 'let's schedule a sync' for actual progress"
+    mechanism_zh: "用流程消耗替代实质进展"
+    mechanism_en: "Process consumption replaces substantive progress"
+    detection_signals:
+      - pattern_zh: "同一议题在3次以上会议中出现，无新结论"
+        pattern_en: "Same topic appears in >= 3 meetings with no new conclusion"
+    classic_lines_zh:
+      - "这个我们约个会再对齐一下"
+      - "我们拉个会讨论一下"
+    classic_lines_en:
+      - "Let's set up a meeting to align on this"
+      - "Let's schedule a sync to discuss"
+    severity_range: [1, 3]
+
+  - id: ghost_owner
+    name_zh: "Owner幽灵妖"
+    name_en: "The Ghost Owner"
+    emoji: "🐌"
+    category: behavior
+    description_zh: "名义上有Owner，但此人实际消失、不推进、不回应"
+    description_en: "Named owner but person effectively vanishes"
+    mechanism_zh: "占位不做事，既不放手也不推进"
+    mechanism_en: "Holds position without doing work, neither releasing nor progressing"
+    detection_signals:
+      - pattern_zh: "Owner在最近N轮讨论/跟进中无发言或动作"
+        pattern_en: "Owner absent from last N rounds of discussion/follow-up"
+    classic_lines_zh:
+      - "(沉默)"
+    classic_lines_en:
+      - "(silence)"
+    severity_range: [2, 3]
+
+  - id: scope_creep_shield
+    name_zh: "需求膨胀防御妖"
+    name_en: "The Scope Creep Shield"
+    emoji: "📈"
+    category: behavior
+    description_zh: "通过不断追加前置条件/要求来实质否决一件事"
+    description_en: "Continuously adds prerequisites to effectively kill an initiative"
+    mechanism_zh: "用「完善」的名义让事情永远无法启动"
+    mechanism_en: "Uses 'thoroughness' to ensure nothing ever starts"
+    detection_signals:
+      - pattern_zh: "同一事项的scope/前置条件在3轮沟通中持续增加"
+        pattern_en: "Same item's scope/prerequisites grow across >= 3 rounds of communication"
+    classic_lines_zh:
+      - "要做的话，那我们还得先把XX也考虑进去"
+      - "这个做之前，还需要先解决..."
+    classic_lines_en:
+      - "If we're doing this, we should also factor in XX"
+      - "Before we start, we also need to resolve..."
+    severity_range: [1, 3]
+
+  - id: blame_redirector
+    name_zh: "责任转嫁妖"
+    name_en: "The Blame Redirector"
+    emoji: "🫥"
+    category: behavior
+    description_zh: "把责任引向不在场的人或不相关的人"
+    description_en: "Attributes responsibility to absent or uninvolved parties"
+    mechanism_zh: "利用不在场者无法自辩的特点转移责任"
+    mechanism_en: "Exploits absent party's inability to defend themselves to redirect blame"
+    detection_signals:
+      - pattern_zh: "在讨论中引用不在场的人作为事项发起者或负责方"
+        pattern_en: "References absent person as original owner/initiator"
+    classic_lines_zh:
+      - "这个之前不是XX在看吗？"
+      - "当时是XX提的，你找他"
+    classic_lines_en:
+      - "Wasn't XX looking at this?"
+      - "XX originally brought this up, talk to them"
+    severity_range: [1, 3]

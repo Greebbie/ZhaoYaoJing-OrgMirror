@@ -1,0 +1,102 @@
+# Structural Layer Monsters / 系统层妖怪
+
+monsters:
+  - id: sliding_deadline
+    name_zh: "Deadline漂移妖"
+    name_en: "The Sliding Deadline"
+    emoji: "⏰"
+    category: structural
+    description_zh: "截止日期悄悄后移，无正式宣布、无原因记录"
+    description_en: "Deadline quietly shifts backward without formal announcement"
+    mechanism_zh: "用微调避免正式的「延期」定性"
+    mechanism_en: "Micro-adjustments avoid formal 'delay' classification"
+    detection_signals:
+      - pattern_zh: "同一事项的时间锚点在多轮沟通中后退>=2次"
+        pattern_en: "Same item's time anchor retreats >= 2 times across communications"
+    classic_lines_zh:
+      - "下周应该可以，（下周）再看看吧"
+      - "时间上稍微调一下"
+    classic_lines_en:
+      - "Should be ready next week... (next week) let's see"
+      - "Let's adjust the timeline slightly"
+    severity_range: [1, 3]
+
+  - id: bypass_artist
+    name_zh: "层级绕行妖"
+    name_en: "The Bypass Artist"
+    emoji: "🔀"
+    category: structural
+    description_zh: "绕过直接Owner/负责人，直接找更高层或其他路径推动"
+    description_en: "Goes around direct owner to higher authority or alternative paths"
+    mechanism_zh: "利用信息不对称和权力差制造既成事实"
+    mechanism_en: "Exploits information asymmetry and power differential to create fait accompli"
+    detection_signals:
+      - pattern_zh: "决策链中出现非直接相关的高层介入"
+        pattern_en: "Non-directly-related senior leader appears in decision chain"
+    classic_lines_zh:
+      - "我跟XX总聊了一下，他觉得可以"
+      - "这个事情XX总已经知道了"
+    classic_lines_en:
+      - "I chatted with VP XX, he thinks it's fine"
+      - "VP XX is already aware of this"
+    severity_range: [2, 4]
+
+  - id: mutation_drift
+    name_zh: "需求变异妖"
+    name_en: "The Mutation Drift"
+    emoji: "🧬"
+    category: structural
+    description_zh: "需求、目标、验收标准在执行过程中被悄悄改写"
+    description_en: "Requirements/goals/acceptance criteria quietly rewritten during execution"
+    mechanism_zh: "通过重新定义来掌控叙事权"
+    mechanism_en: "Controls the narrative by redefining reality"
+    detection_signals:
+      - pattern_zh: "事项的核心定义在不同文档/讨论中不一致"
+        pattern_en: "Item's core definition (goal/scope/success criteria) inconsistent across documents/discussions"
+    classic_lines_zh:
+      - "我们最开始说的不是这个意思吧？"
+      - "需求有调整，你没收到通知？"
+    classic_lines_en:
+      - "That's not what we originally meant, right?"
+      - "Requirements changed, didn't you get the update?"
+    severity_range: [2, 4]
+
+  - id: legacy_blame
+    name_zh: "技术债甩锅妖"
+    name_en: "The Legacy Blame"
+    emoji: "🏚️"
+    category: structural
+    description_zh: "所有问题归因于「历史遗留」，无人接手改善"
+    description_en: "All problems attributed to 'historical reasons' with no one taking ownership"
+    mechanism_zh: "用过去的混乱为现在的不作为提供永久豁免"
+    mechanism_en: "Uses past chaos to permanently exempt present inaction"
+    detection_signals:
+      - pattern_zh: "同一「历史遗留」问题被提及>=3次，无解决方案产出"
+        pattern_en: "Same 'legacy issue' mentioned >= 3 times with no solution output"
+    classic_lines_zh:
+      - "这个是历史遗留问题，没办法"
+      - "之前就是这样的，改不了"
+    classic_lines_en:
+      - "That's a legacy issue, nothing we can do"
+      - "It's always been like this, can't change it"
+    severity_range: [2, 4]
+
+  - id: info_gatekeeper
+    name_zh: "信息武器化妖"
+    name_en: "The Info Gatekeeper"
+    emoji: "🎣"
+    category: structural
+    description_zh: "选择性地不共享关键信息，制造信息差"
+    description_en: "Selectively withholds information to maintain power asymmetry"
+    mechanism_zh: "通过信息垄断建立权力壁垒"
+    mechanism_en: "Builds power barriers through information monopoly"
+    detection_signals:
+      - pattern_zh: "决策相关信息仅在部分人之间流通"
+        pattern_en: "Decision-relevant information only circulates among subset of stakeholders"
+    classic_lines_zh:
+      - "啊你不知道吗？我以为有人跟你说了"
+      - "这个信息我以为大家都知道了"
+    classic_lines_en:
+      - "Oh, you didn't know? I thought someone told you"
+      - "I assumed everyone was already aware"
+    severity_range: [2, 4]

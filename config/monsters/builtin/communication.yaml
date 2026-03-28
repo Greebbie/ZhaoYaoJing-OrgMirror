@@ -1,0 +1,130 @@
+# Communication Layer Monsters / 沟通层妖怪
+
+monsters:
+  - id: eternal_evaluator
+    name_zh: "评估拖延妖"
+    name_en: "The Eternal Evaluator"
+    emoji: "🦊"
+    category: communication
+    description_zh: "用「评估」「调研」「先看看」替代明确的是/否"
+    description_en: "Uses 'evaluate' / 'research' / 'let's see' to replace clear yes/no"
+    mechanism_zh: "用流程幻觉替代决策"
+    mechanism_en: "Substitutes procedural illusion for actual decision-making"
+    detection_signals:
+      - pattern_zh: "同一事项出现2次以上「先评估」且无评估产出物"
+        pattern_en: "Same item hits 'let's evaluate' >= 2 times with no evaluation output"
+    classic_lines_zh:
+      - "这个我们先评估一下可行性"
+      - "我们再调研看看"
+      - "这个事情先看看再说"
+    classic_lines_en:
+      - "Let's first evaluate the feasibility on this"
+      - "We need to do more research"
+      - "Let's see how it goes"
+    severity_range: [1, 3]
+
+  - id: phantom_ally
+    name_zh: "社交性支持妖"
+    name_en: "The Phantom Ally"
+    emoji: "👻"
+    category: communication
+    description_zh: "口头表态支持，但后续无任何资源投入或动作"
+    description_en: "Verbally supports but follows up with zero resources or actions"
+    mechanism_zh: "用低成本的语言承诺换取社交好感，同时保留退出路径"
+    mechanism_en: "Trades low-cost verbal commitment for social goodwill while preserving exit"
+    detection_signals:
+      - pattern_zh: "某人表态「支持/同意」后，30天内无关联动作记录"
+        pattern_en: "Person states 'support/agree' then has no associated action within 30 days"
+    classic_lines_zh:
+      - "方向上我是非常支持的"
+      - "这个思路我同意"
+      - "我觉得可以做"
+    classic_lines_en:
+      - "Directionally I'm very supportive"
+      - "I agree with the approach"
+      - "I think we should do it"
+    severity_range: [1, 3]
+
+  - id: ghost_mandate
+    name_zh: "模糊授权妖"
+    name_en: "The Ghost Mandate"
+    emoji: "🎭"
+    category: communication
+    description_zh: "声称有上级授权，但无法追溯具体人、具体时间、具体条件"
+    description_en: "Claims upper-level authorization that can't be traced to specific person/time/scope"
+    mechanism_zh: "借用权力幻影推进个人意图"
+    mechanism_en: "Leverages phantom authority to push personal agenda"
+    detection_signals:
+      - pattern_zh: "出现「领导说」「上面的意思」但无会议纪要/邮件/文档佐证"
+        pattern_en: "Appears 'leadership said' / 'word from above' without meeting notes/email/doc evidence"
+    classic_lines_zh:
+      - "这个老板之前提过的"
+      - "上面的意思是这样"
+      - "领导说过要做这个"
+    classic_lines_en:
+      - "The boss mentioned this before"
+      - "Word from above is to do it this way"
+      - "Leadership has already signed off"
+    severity_range: [2, 3]
+
+  - id: compliment_assassin
+    name_zh: "先扬后杀妖"
+    name_en: "The Compliment Assassin"
+    emoji: "🎪"
+    category: communication
+    description_zh: "先肯定再否定，让人无法直接反驳"
+    description_en: "Affirm first then negate, making direct rebuttal impossible"
+    mechanism_zh: "用礼貌包装否决权，使反对变得不可挑战"
+    mechanism_en: "Wraps veto in politeness, making opposition unchallengeable"
+    detection_signals:
+      - pattern_zh: "「你说得对/想法挺好/确实是个方向」后紧跟「但是/不过/只是」"
+        pattern_en: "'You're right / good idea / definitely a direction' followed immediately by 'but / however / just that'"
+    classic_lines_zh:
+      - "你这个思路很好，但目前阶段可能不太适合"
+      - "想法是对的，不过实现起来可能有困难"
+    classic_lines_en:
+      - "Great thinking, but not quite right for this stage"
+      - "The idea is solid, but implementation might be challenging"
+    severity_range: [1, 2]
+
+  - id: big_picture_bully
+    name_zh: "大局压制妖"
+    name_en: "The Big Picture Bully"
+    emoji: "🏔️"
+    category: communication
+    description_zh: "用「大局」「战略」「长远」来压制具体的合理诉求"
+    description_en: "Uses 'big picture' / 'strategy' / 'long-term' to suppress specific legitimate needs"
+    mechanism_zh: "把利益冲突伪装成格局差异"
+    mechanism_en: "Disguises interest conflict as vision gap"
+    detection_signals:
+      - pattern_zh: "在资源/优先级争夺中，一方使用抽象框架否定另一方的具体需求"
+        pattern_en: "In resource/priority disputes, one party uses abstract framing to deny another's concrete request"
+    classic_lines_zh:
+      - "你要有大局观，不能只看自己这块"
+      - "从战略角度来看，我们应该..."
+    classic_lines_en:
+      - "You need to see the big picture, not just your piece"
+      - "From a strategic perspective, we should..."
+    severity_range: [2, 3]
+
+  - id: gentle_vetoist
+    name_zh: "温柔否决妖"
+    name_en: "The Gentle Vetoist"
+    emoji: "🐌"
+    category: communication
+    description_zh: "用「我再想想」「可以考虑」替代明确的反对"
+    description_en: "Expresses disagreement as 'let me think about it' / 'we could consider' instead of clear no"
+    mechanism_zh: "用柔性表达后无后续动作或悄悄转移话题"
+    mechanism_en: "Soft language patterns followed by no action or quiet topic-change"
+    detection_signals:
+      - pattern_zh: "柔性表达后无后续动作或悄悄转移话题"
+        pattern_en: "Soft language patterns followed by no action or quiet topic-change"
+    classic_lines_zh:
+      - "我觉得这个事情可以再想想"
+      - "这个可以考虑"
+      - "我们再看看吧"
+    classic_lines_en:
+      - "I think this could use more thought"
+      - "We could consider this"
+      - "Let's revisit this later"
+    severity_range: [1, 2]
